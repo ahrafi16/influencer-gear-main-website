@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+.page{
+    margin:5rem;
+}
+:root{
+    --primary-color:#3A3A3A;
+}
+/* nav styles */
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-menu h3{
+    color: var(--primary-color);
+}
+.nav-menu-items{
+    display: flex;
+}
+.nav-menu-items li{
+    list-style: none;
+    margin-left: 1.25rem;
+}
+.nav-menu-items li a{
+    text-decoration: none;
+    color: var(--primary-color)
+}
+
+/* Banner styles */
+.banner{
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+.banner-title{
+    font-size: 3.25rem;
+}
+.banner-title,
+.banner-description{
+    color: var(--primary-color);
+    margin-bottom: 0.625rem;
+}
+.banner-btn{
+    background-color: #E02C6D;
+    color: #FFF;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 2.5rem;
+    padding: 0.625rem 1.25rem;
+}
+.banner-image{
+    position: relative;
+}
+ .circle{
+    position: relative;
+ }
+.camera{
+    position: absolute;
+    top: 1.875rem;
+    left: 1.875rem;
+}
+
+/* sponsors style */
+.sponsors{
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 1.25rem 0;
+    border-top:0.1px solid gainsboro;
+    border-bottom:0.1px solid gainsboro ;
+}
+
+/* Collection styles */
+.collection{
+    margin-top: 3.5rem;
+}
+.collection-heading{
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+    font-size: 1.75rem;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+.card h1{
+    font-size: 1.75rem;
+    margin-bottom: 0.625rem;
+}
+.card .price{
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+}
+.card p{
+    font-size: 0.875rem;
+}
+.card i{
+    color: orange;
+}
+.card{
+    border-radius: 0.313rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+    padding: 0.938rem;
+}
+.card img{
+    width: 100%;
+}
+#see-more{
+    margin-top: 1.5rem;
+    color: #E02C6D;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Feature style */
+.feature{
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+}
+.feature-content{
+    padding: 0.313rem;
+}
+.feature-heading{
+    font-size: 2.375rem;
+}
+.feature-description{
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-top: 0.313rem;
+}
+.feature-content .feature-btn{
+    background-color: #E02C6D;
+    color: #FFF;
+    padding:0.625rem 1.563rem;
+    border: none;
+    margin-top: 0.625rem;
+}
+
+/* Footer styles */
+.footer{
+    margin-top: 2.5rem;
+    background-color: #0A0826;
+    color: #FFF;
+    text-align: center;
+    padding: 2.5rem;
+}
+.footer-heading{
+    font-size: 1.5rem;
+}
+.footer-copyright{
+    font-size: 0.875rem;
+}
+.footer-links{
+    margin-top: 0.313rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.625rem;
+}
+.footer-links i{
+    color: #FFF;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* phone responsive */
+@media screen and (max-width:576px) {
+    .page{
+        margin: 1rem;
+    }
+    .banner,
+    .feature
+    {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .banner img{
+        width: 100%;
+    }
+    .camera{
+        top: 0;
+        left: 0;
+    }
+    .nav-menu,
+    .nav-menu-items
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sponsors{
+        flex-wrap:wrap;
+        border: none;
+    }
+    .card-container{
+        grid-template-columns: 1fr;
+    }
+    .feature{
+        gap: 0.625rem;
+    }
+
+   
+}
